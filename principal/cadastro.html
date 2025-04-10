@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inovaçao 3</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @charset "UTF-8";
+
+* {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/* ELEMENTOS DA INTERFACE */
+
+body {
+    background-color: #15142b;
+    background-image: linear-gradient(180deg, #3c9ada,  rgb(179, 163, 163));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+header, main, section, article {
+    max-width: 500px;
+    margin-left: 30%;
+}
+
+header > h1 {
+    color: white;
+    text-shadow: 3px 3px 0px black;
+}
+
+main, section, article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.502);
+}
+
+
+p {
+    text-align: justify;
+    line-height: 1.5em;
+}
+
+h2, h3, h4 {
+    color: #372991;
+    margin: 0 0 10px 0;
+}
+
+/* ELEMENTOS DE FORMULÁRIO */
+
+form {
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    width: fit-content;
+    font-size: 0.8em;
+    font-weight: 100;
+    background-color: rgba(55, 41, 145, 0.2);
+    padding: 3px 7px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-radius: 5px;
+}
+
+input[type=text], [type=number], select, input[type=date], input[type=date], input[type=datetime], input[type=email], input[type=month], input[type=password], input[type=range], input[type=tel], input[type=time], input[type=week] {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input[type=button], button {
+    width: 100%;
+    background-color: #372991;
+    font-size: 1em;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=button]:hover, button:hover {
+    background-color: #291f6c;
+}
+
+input[type=radio] + label, input[type=checkbox] + label {
+    display: inline-block;
+    font-size: 1em;
+    background-color: rgba(0, 0, 0, 0);
+}
+    </style>
+</head>
+<body>
+    <div>
+    <main>
+        <h1>Cadastro</h1>
+        <form action="cadastro.php" method="post">
+        <label for="nome">Nome Completo</label>
+        <input type="text" name="nome" id="idnome" placeholder="Digite Aqui Seu Nome Completo" required>
+        <label for="dtnasc">Data de nascimento</label>
+        <input type="date" name="dtnasc" id="iddtnasc" placeholder="Digite Aqui Sua Data de Nascimento" required>
+        <label for="sexo">Sexo</label>
+        <input type="radio" name="sexo" id="idmasc" value="Masculino"required>
+        <label for="masc">Masculino</label>
+        <input type="radio" name="sexo" id="idfem" value="Femenino"required>
+        <label for="fem">Feminino</label>
+        <label for="telefone">Telefone</label>
+        <input type="number" name="telefone" id="idtelefone" placeholder="Digite Aqui Seu Telefone" required>
+        <label for="endereco">Endereço</label>
+        <input type="text" name="endereco" id="idendereco" placeholder="Digite Aqui Seu Endereço" required>
+        <label for="cpf">CPF</label>
+        <input type="text" size="15" name="cpf" id="idcpf" maxlength="20" placeholder="000.000.000-00" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="idemail" placeholder="Digite Aqui Seu Email" required>
+        <input type="submit" value="Cadastrar">
+    </form>
+    </main>
+</div>
+</body>
+</html>

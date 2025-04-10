@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Aluno</title>
+    <style>
+        /* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Imagem de fundo */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3; /* Controla a opacidade da imagem de fundo */
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #3c9aDA;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #555;
+}
+
+/* Conteúdo */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Estilo das abas */
+.tab-content {
+    display: none;
+}
+
+/* Mostrar conteúdo da aba ativa */
+#mensalidade:target,
+#boletos:target,
+#notificacoes:target {
+    display: block;
+}
+img {
+    width: 100px;
+}
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img class="foto" src="img/fundo3.jpg" alt="Imagem de fundo">
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Perfil de Aluno</h2>
+            <ul>
+                <li><a href="#mensalidade">Mensalidade</a></li>
+                <li><a href="#boletos">Boletos</a></li>
+                <li><a href="#notificacoes">Notificações</a></li>
+            </ul>
+            <a href="principal.html"><img src="img/lg.png" alt="Logo da Finanfitness" class="logo"></a>
+        </div>
+        <div class="content">
+            <div id="mensalidade" class="tab-content">
+                <h3>Mensalidade</h3>
+                <p>Informações sobre a mensalidade do aluno.</p>
+            </div>
+            <div id="boletos" class="tab-content">
+                <h3>Boletos</h3>
+                <p>Detalhes sobre os boletos gerados.</p>
+            </div>
+            <div id="notificacoes" class="tab-content">
+                <h3>Notificações</h3>
+                <p>Aqui estão as notificações relacionadas ao aluno.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
