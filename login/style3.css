@@ -1,3 +1,4 @@
+/* Reseta margin, padding e define a fonte padrão para todos os elementos */
 * {
     margin: 0;
     padding: 0;
@@ -5,32 +6,36 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Corpo da página */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #3c9ada;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+    background: #3c9ada; /* Cor de fundo */
     background-size: cover;
     background-position-x: center;
 }
 
+/* Container principal que envolve o formulário */
 .container {
     width: 420px;
     background-color: transparent;
-    border: 2px solid #566161;
-    border-radius: 10px;
-    color: #fff;
+    border: 2px solid #566161; /* Cor de borda */
+    border-radius: 10px; /* Bordas arredondadas */
+    color: #fff; /* Cor do texto */
     padding: 30px 40px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); /* Sombra leve para destaque */
+    backdrop-filter: blur(20px); /* Efeito de desfoque no fundo */
 }
 
+/* Estilo para o título */
 .container h1 {
     font-size: 36px;
     text-align: center;
 }
 
+/* Caixa de entrada (input) */
 .input-box {
     position: relative;
     width: 100%;
@@ -41,19 +46,21 @@ body {
     width: 100%;
     height: 50px;
     background-color: transparent;
-    border: 2px solid #566161;
-    border-radius: 40px;
-    outline: none;
+    border: 2px solid #566161; /* Cor da borda */
+    border-radius: 40px; /* Bordas arredondadas */
+    outline: none; /* Remove o contorno padrão ao focar */
     font-size: 16px;
-    color: #fff;
+    color: #fff; /* Cor do texto dentro do input */
     padding: 10px 20px;
-    padding-right: 40px; /* Dá espaço para o emoji */
+    padding-right: 40px; /* Dá espaço para o emoji à direita */
 }
 
+/* Placeholder do input */
 .input-box input::placeholder {
     color: #fff;
 }
 
+/* Emoji dentro do input (deslocado para a direita) */
 .input-box .emoji {
     position: absolute;
     right: -40px; /* Posiciona o emoji fora da caixa, à direita */
@@ -62,63 +69,73 @@ body {
     font-size: 24px;
 }
 
+/* Estilo para a seção de "lembrar senha" e link "esqueci a senha" */
 .remember-forgot {
     display: flex;
     justify-content: space-between;
-    margin: -15px 0 15px;
+    margin: -15px 0 15px; /* Ajusta o espaçamento */
 }
 
+/* Estilo para o checkbox e seu label */
 .remember-forgot label input {
-    accent-color: #fff;
-    margin-right: 5px;
+    accent-color: #fff; /* Cor do checkbox */
+    margin-right: 5px; /* Espaçamento entre o checkbox e o texto */
 }
 
+/* Estilo para o link "Esqueci a senha" */
 .remember-forgot a {
     text-decoration: none;
     color: #fff;
 }
 
 .remember-forgot a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
+/* Botão de login */
 .login {
     width: 100%;
     height: 50px;
     background-color: #fff;
     border: none;
-    border-radius: 40px;
+    border-radius: 40px; /* Bordas arredondadas */
     cursor: pointer;
     font-size: 16px;
-    color: #333;
-    font-weight: 600;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-    margin-top: 20px;
+    color: #333; /* Cor do texto */
+    font-weight: 600; /* Deixa o texto em negrito */
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Sombra leve */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Efeito hover no botão de login */
 .login:hover {
     background-color: transparent;
-    border: 2px solid #566161;
+    border: 2px solid #566161; /* Cor da borda ao passar o mouse */
     color: #fff;
-    transition: 0.5s;
+    transition: 0.5s; /* Transição suave */
 }
 
+/* Link de registro (cadastro) */
 .register-link {
     font-size: 14px;
     text-align: center;
-    margin: 20px 0px 15px;
+    margin: 20px 0px 15px; /* Espaçamento ao redor do link */
 }
 
 .register-link a {
     text-decoration: none;
-    color: #fff;
-    font-weight: 500;
+    color: #fff; /* Cor do texto */
+    font-weight: 500; /* Peso da fonte */
 }
 
 .register-link a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
 }
+
+/* Estilos para a imagem de logo */
 img {
     width: 100px;
     height: 100px;
+    display: block;
+    margin: 0 auto 20px; /* Centraliza a imagem e adiciona espaçamento abaixo */
 }

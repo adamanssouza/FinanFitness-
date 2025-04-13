@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos Mensais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .meses {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .meses button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .meses button:hover {
+            background-color: #0056b3;
+        }
+        
+        .boleto {
+            width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            text-align: left;
+            display: none;
+        }
+        
+        .boleto h2 {
+            text-align: center;
+        }
+        
+        .linha {
+            margin-bottom: 10px;
+        }
+        
+        .codigo-barra {
+            font-family: monospace;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f8f8f8;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Boletos Mensais - FinanFitness</h1>
+    <div class="meses">
+        <button onclick="gerarBoleto('Janeiro')">Janeiro</button>
+        <button onclick="gerarBoleto('Fevereiro')">Fevereiro</button>
+        <button onclick="gerarBoleto('Março')">Março</button>
+        <button onclick="gerarBoleto('Abril')">Abril</button>
+        <button onclick="gerarBoleto('Maio')">Maio</button>
+        <button onclick="gerarBoleto('Junho')">Junho</button>
+        <button onclick="gerarBoleto('Julho')">Julho</button>
+        <button onclick="gerarBoleto('Agosto')">Agosto</button>
+        <button onclick="gerarBoleto('Setembro')">Setembro</button>
+        <button onclick="gerarBoleto('Outubro')">Outubro</button>
+        <button onclick="gerarBoleto('Novembro')">Novembro</button>
+        <button onclick="gerarBoleto('Dezembro')">Dezembro</button>
+    </div>
+
+    <div class="boleto" id="boleto">
+        <h2>Boleto de Pagamento</h2>
+        <div class="linha"><strong>Mês:</strong> <span id="mes"></span></div>
+        <div class="linha"><strong>Beneficiário:</strong> FinanFitness LTDA</div>
+        <div class="linha"><strong>Vencimento:</strong> <span id="vencimento"></span></div>
+        <div class="linha"><strong>Valor:</strong> R$ <span id="valor"></span></div>
+        <div class="linha"><strong>Nosso Número:</strong> <span id="nossoNumero"></span></div>
+        <div class="codigo-barra" id="codigoBarra">00000.00000 00000.000000 00000.000000 0 00000000000000</div>
+    </div>
+
+    <script>
+        function gerarBoleto(mes) {
+            const vencimento = `10/${mes}/2025`;
+            const valor = (100 + Math.floor(Math.random())).toFixed(2);
+            const nossoNumero = Math.floor(10000000000 + Math.random() * 9999999999);
+            const codigoBarra = "23791.11101 22222.222229 33333.333333 4 56780000012345";
+
+            document.getElementById("mes").textContent = mes;
+            document.getElementById("vencimento").textContent = vencimento;
+            document.getElementById("valor").textContent = valor;
+            document.getElementById("nossoNumero").textContent = nossoNumero;
+            document.getElementById("codigoBarra").textContent = codigoBarra;
+
+            document.getElementById("boleto").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>

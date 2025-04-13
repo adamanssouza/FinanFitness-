@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f3;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        .notificacoes {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .notificacao {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        
+        .notificacao h4 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .notificacao p {
+            margin-top: 10px;
+            color: #555;
+        }
+        
+        .notificacao .data {
+            font-size: 0.85em;
+            color: #888;
+            margin-top: 10px;
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Notificações</h1>
+    <div class="notificacoes">
+        <div class="notificacao">
+            <h4>Notificação 1: Atualização da Mensalidade</h4>
+            <p>A mensalidade de Abril foi ajustada devido aos dias que a academia estara em manutençao. O valor atualizado será de R$ 90,00, com vencimento até o dia 10/04/2025.</p>
+            <div class="data">Data: 01/04/2025</div>
+        </div>
+        <div class="notificacao">
+            <h4>Notificação 2: Novo Boleto Disponível</h4>
+            <p>Seu novo boleto de pagamento está disponível. Não se esqueça de efetuar o pagamento até o vencimento para evitar juros.</p>
+            <div class="data">Data: 05/04/2025</div>
+        </div>
+        <div class="notificacao">
+            <h4>Notificação 3: Manutenção no Sistema</h4>
+            <p>Informamos que o sistema estará em manutenção no dia 08/04/2025, das 00:00 às 06:00. Durante esse período, o acesso estará temporariamente indisponível.</p>
+            <div class="data">Data: 06/04/2025</div>
+        </div>
+    </div>
+</body>
+
+</html>
