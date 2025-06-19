@@ -1,114 +1,141 @@
-/* Resetando estilos padrão */
+/* Reset de estilos */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fonte geral do site */
+
+/* Fonte global */
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #010102;
-    color: #111;
-    overflow-x: hidden; /* Impede o scroll horizontal */
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
+
 /* Imagem de fundo */
+
 .foto {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Usando a altura total da tela */
+    height: 100vh;
     object-fit: cover;
     object-position: center;
     z-index: -1;
 }
 
+
 /* Navegação */
+
 nav {
-    position: fixed; /* Fixa o menu no topo */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
-    padding: 20px 10%; /* Espaçamento lateral */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     z-index: 10;
 }
 
-/* Logo da Finanfitness */
 nav .logo {
     width: 120px;
     height: auto;
-    margin-right: 30px;
 }
 
-/* Estilo do menu de navegação */
+
+/* Menu */
+
 ul {
     display: flex;
-    justify-content: flex-end;
     list-style: none;
-    align-items: center;
+    gap: 30px;
 }
 
-/* Estilos individuais para os itens do menu */
-li {
-    margin: 0 20px;
-}
-
-/* Estilo dos links */
-a {
+li a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     transition: color 0.3s ease-in-out;
 }
 
-a:hover {
-    color: #3c9ada; /* Cor de destaque */
+li a:hover {
+    color: #3c9ada;
 }
 
-/* Adicionando um pouco de espaçamento abaixo do header */
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
+
+/* Título */
 
 section {
-    margin-top: 20%;
+    margin-top: 30vh;
     margin-left: 5%;
-    color: white;
-    font-size: 40px;
 }
-p {
-    font-size: 20px;
-    color: white;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 30px;
+
+section h1 {
+    font-size: 48px;
+    color: #fff;
 }
+
 .texto-menor {
-    font-size: 20px; /* Tamanho menor */
-    color: #ffffff; /* Cor mais suave */
-    text-align: center; /* Alinha o texto ao centro */
-    margin-top: 10px; /* Distância entre o título e o texto */
-    margin-right: 80%
+    font-size: 20px;
+    margin-top: 10px;
+    color: #ddd;
 }
+
+
+/* Rodapé */
+
 footer {
-    color:white;
-    margin-top: 16%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
     text-align: center;
-    background: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    font-size: 14px;
+    color: #fff;
+    margin-top: 50px;
 }
-/*   #video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Faz o vídeo cobrir toda a tela sem distorcer */
-  /*          z-index: -1; /* Coloca o vídeo atrás do conteúdo */
-/*        }
+
+
+/* Responsivo */
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 5%;
+    }
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    section {
+        margin-top: 40vh;
+        text-align: left;
+        padding: 0 5%;
+    }
+    section h1 {
+        font-size: 32px;
+    }
+    .texto-menor {
+        font-size: 16px;
+    }
+    footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações do Aluno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f5f5f5;
+        }
+        
+        .notificacao {
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: aparecer 0.4s ease;
+        }
+        
+        .pendente {
+            background-color: #fff3cd;
+            border-left: 6px solid #ffc107;
+        }
+        
+        .promocao {
+            background-color: #d4edda;
+            border-left: 6px solid #28a745;
+        }
+        
+        .logo {
+            height: 70px;
+            display: block;
+            margin: 20px auto;
+            margin: 0 auto;
+            justify-content: center
+            /* tamanho reduzido */
+        }
+        
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Notificações Recentes</h2>
+    <div id="notificacoes">
+        <p>Carregando notificações...</p>
+    </div>
+    <a href="../perfilAluno/perfilAluno.php" class="logo-link">
+        <img src="img/lg.png" alt="Muscular figure lifting a large weight overhead with stylized letters F and F on the back, surrounded by the words FinanFitness in bold text, conveying strength and motivation" class="logo">
+    </a>
+    </a>
+    <script>
+        fetch("notificacoes.php")
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById("notificacoes");
+                container.innerHTML = ""; // limpa "Carregando..."
+                if (data.length === 0) {
+                    container.innerHTML = "<p>Sem notificações no momento.</p>";
+                } else {
+                    data.forEach(n => {
+                        const div = document.createElement("div");
+                        div.className = `notificacao ${n.tipo}`;
+                        div.innerHTML = `<strong>${n.data}</strong><br>${n.mensagem}`;
+                        container.appendChild(div);
+                    });
+                }
+            })
+            .catch(error => {
+                document.getElementById("notificacoes").innerHTML = "<p>Erro ao carregar notificações.</p>";
+                console.error("Erro ao buscar notificações:", error);
+            });
+    </script>
+
+</body>
+
+</html>
