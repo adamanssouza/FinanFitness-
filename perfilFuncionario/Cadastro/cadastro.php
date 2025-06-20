@@ -181,7 +181,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="btn-group">
             <button type="submit" class="btn cadastrar">Cadastrar</button>
-            <button type="button" class="btn voltar" onclick="location.href='../principal/principal.html'">Voltar</button>
+            <button type="button" class="btn voltar" onclick="location.href='../../login/login.php'">Voltar</button>
             <button type="button" class="btn listar" onclick="location.href='../../Listagem/index.php'">Listar Cadastros</button>
         </div>
     </form>

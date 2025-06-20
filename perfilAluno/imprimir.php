@@ -56,3 +56,5 @@ $dompdf->setPaper("A4", "portrait");
 $dompdf->render();
 $dompdf->stream("boleto_$mes.pdf", ["Attachment" => false]);
 exit;
+
+
