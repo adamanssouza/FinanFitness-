@@ -63,7 +63,7 @@
      <input type="text" name="login" placeholder="Login" required>
     <input type="password" name="senha" placeholder="Senha" required>
     <input type="submit" value="Entrar">
-    <input type="button" value="Voltar" onclick="window.location.href='../principal/principal.html';">
+    <input type="button" value="Voltar" onclick="window.location.href='../principal/index.html';">
 
 </form>
 

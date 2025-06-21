@@ -142,7 +142,7 @@ $boletos = [
                 <li><a href="#" onclick="mostrarAba('mensalidade'); return false;">Mensalidade</a></li>
                 <li><a href="#" onclick="mostrarAba('notificacoes'); return false;">Notificações</a></li>
             </ul>
-            <a href="../principal/principal.html"><img src="img/lg.png" alt="Logo da Finanfitness" class="logo" /></a>
+            <a href="../principal/index.html"><img src="img/lg.png" alt="Logo da Finanfitness" class="logo" /></a>
         </div>
         <div class="content">
             <!-- Aba Mensalidade -->
